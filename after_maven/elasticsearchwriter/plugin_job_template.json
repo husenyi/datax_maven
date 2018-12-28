@@ -1,0 +1,31 @@
+{
+          "name": "elasticsearchwriter",
+          "parameter": {
+            "endpoint": "http://ip:9200",
+            "accessId": "",
+            "accessKey": "",
+            "index": "t_address",
+            "type": "datax_type",
+            "cleanup": true,
+            "settings": {"index" :{"number_of_shards": 8, "number_of_replicas": 1}},
+            "discovery": false,
+            "batchSize": 4096,
+            "splitter": "\t",
+            "aliasMode":"append",
+            "column": [
+                    {"name":"id","type":"BIGINT"},
+                    {"name":"eid","type":"STRING"},
+                    {"name":"seq_no","type":"BIGINT"},
+                    {"name":"address","type":"STRING"},
+                    {"name":"name","type":"STRING"},
+                    {"name":"postcode","type":"STRING"},
+                    {"name":"date","type":"STRING"},
+                    {"name":"source","type":"STRING"},
+                    {"name":"update_date","type":"STRING"},
+                    {"name":"row_update_time","type":"TIMESTAMP"},
+                    {"name":"address_code","type":"STRING"},
+                    {"name":"schema","type":"STRING"},
+                    {"name":"source_table","type":"STRING"}
+            ]
+          }
+        }
